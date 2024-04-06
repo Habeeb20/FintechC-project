@@ -1,4 +1,7 @@
-namespace FintechC_project.Repository.Abstractions
+
+using Entity;
+
+namespace Repository.Abstractions
 {
     public interface ITransactionRepository
     {

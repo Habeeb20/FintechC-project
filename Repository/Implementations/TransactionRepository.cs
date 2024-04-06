@@ -19,7 +19,7 @@ namespace Repository.Implementations
             }
             return false;
         }
-        public List<Transaction> GetAll(int pin)
+        public List<Transaction> GetAll(Guid accountId)
         {
             // var transactions = Transactions_DB
             // .Where(x => x.Pin == pin).ToList();
@@ -30,17 +30,17 @@ namespace Repository.Implementations
             List<Transaction> transactions = [];
             foreach (var transaction in transactions)
             {
-                if (transaction.Pin == pin)
+                if (transaction.AccountId == accountId)
                 {
                     transactions.Add(transaction);
                 }
             }
             return transactions;
         }
-        public List<Transaction> GetByDate(int pin, DateTime transactionDate)
+        public List<Transaction> GetByDate(Guid accountId, DateTime transactionDate)
         {
             var transactions = Transactions_DB
-            .FindAll(t => t.Pin == pin && t.TransactionDate.Date >= transactionDate);
+            .FindAll(t => t.AccountId == accountId && t.TransactionDate.Date >= transactionDate);
             return transactions;
         }
         

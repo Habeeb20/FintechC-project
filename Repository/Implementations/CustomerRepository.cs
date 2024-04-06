@@ -1,8 +1,9 @@
 using Entity;
+using Repository.Abstractions;
 
 namespace Repository.Implementations
 {
-    public class CustomerRepository
+    public class CustomerRepository : ICustomerRepository
     {
         private readonly List<Customer> Customers_DB;
         public CustomerRepository()
@@ -23,6 +24,18 @@ namespace Repository.Implementations
         {
             var customer = Customers_DB
             .Find(c => c.NIN == nin);
+            return customer;
+        }
+        public Customer Get(string phone, string password)
+        {
+            var customer = Customers_DB.
+            FirstOrDefault(x => x.Phone == phone && x.Password == password);
+            return customer;
+        }
+        public Customer Get(string password)
+        {
+            var customer = Customers_DB.
+            FirstOrDefault(x => x.Password == password);
             return customer;
         }
         public Customer GetById(Guid id)
@@ -52,5 +65,5 @@ namespace Repository.Implementations
             }
             return false;
         }
-    }
+   }
 }

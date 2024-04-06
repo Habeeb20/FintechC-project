@@ -4,7 +4,7 @@ namespace Entity
 {
     public class Transaction : BaseEntity
     {
-        public int Pin;
+        public Guid AccountId = default!;
         public decimal Amount;
         public DateTime TransactionDate = DateTime.Now;
         public string? Description;
