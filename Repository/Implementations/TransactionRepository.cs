@@ -7,7 +7,7 @@ namespace Repository.Implementations
         private readonly List<Transaction> Transactions_DB;
         public TransactionRepository()
         {
-            Transactions_DB = [];   
+            Transactions_DB  = [];   
         }
         // CRUD
         public bool Add(Transaction transaction)
