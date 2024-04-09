@@ -1,4 +1,4 @@
-namespace Business.Implementations
+namespace Services.Implementations
 {
     public class AccountService
     {

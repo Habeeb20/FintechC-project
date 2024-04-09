@@ -5,10 +5,9 @@ namespace Repository.Implementations
 {
     public class CustomerRepository : ICustomerRepository
     {
-        private readonly List<Customer> Customers_DB;
+        private static readonly List<Customer> Customers_DB = [];
         public CustomerRepository()
         {
-            Customers_DB = [];
         }
         // CRUD
         public bool Add(Customer customer)
@@ -65,5 +64,5 @@ namespace Repository.Implementations
             }
             return false;
         }
-   }
+    }
 }

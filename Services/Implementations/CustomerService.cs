@@ -29,19 +29,24 @@ namespace Services.Implementations
                 Gender = request.Gender,
                 NIN = request.NIN
             };
-           var isCustomerAdded = _customerRepository.Add(customer);
-           return isCustomerAdded;
+            var isCustomerAdded = _customerRepository.Add(customer);
+            return isCustomerAdded;
+        }
+        public Customer GetCustomer(string phone, string password)
+        {
+            var customer = _customerRepository.Get(phone, password);
+            return customer;
         }
         // public (Customer, bool) Update(string pass, UpdateCustomerRequest request)
         // {
         //     if (request is null)
         //         return (null, false);
-            
+
         //     var authenticatedCustomer = _customerRepository.Get(pass);
 
         //     if (authenticatedCustomer is null)
         //         return (null, false);
-            
+
 
         // }
     }

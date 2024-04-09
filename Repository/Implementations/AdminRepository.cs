@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using OOP_Project.Repository.Interface;
-using OOP_Project.Entities;
-namespace OOP_Project.Repository.Implementation 
+using Entity;
+using Repository.Abstractions;
+namespace Repository.Implementations
 {
     public class AdminRepository: IAdminRepository
     {

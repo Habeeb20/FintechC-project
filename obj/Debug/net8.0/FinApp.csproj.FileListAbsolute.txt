@@ -1,12 +1,13 @@
+C:\Users\zafru\OneDrive\Desktop\FinApp\obj\Debug\net8.0\FinApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zafru\OneDrive\Desktop\FinApp\obj\Debug\net8.0\FinApp.AssemblyInfoInputs.cache
+C:\Users\zafru\OneDrive\Desktop\FinApp\obj\Debug\net8.0\FinApp.AssemblyInfo.cs
+C:\Users\zafru\OneDrive\Desktop\FinApp\obj\Debug\net8.0\FinApp.csproj.CoreCompileInputs.cache
+C:\Users\zafru\OneDrive\Desktop\FinApp\obj\Debug\net8.0\FinApp.sourcelink.json
 C:\Users\zafru\OneDrive\Desktop\FinApp\bin\Debug\net8.0\FinApp.exe
 C:\Users\zafru\OneDrive\Desktop\FinApp\bin\Debug\net8.0\FinApp.deps.json
 C:\Users\zafru\OneDrive\Desktop\FinApp\bin\Debug\net8.0\FinApp.runtimeconfig.json
 C:\Users\zafru\OneDrive\Desktop\FinApp\bin\Debug\net8.0\FinApp.dll
 C:\Users\zafru\OneDrive\Desktop\FinApp\bin\Debug\net8.0\FinApp.pdb
-C:\Users\zafru\OneDrive\Desktop\FinApp\obj\Debug\net8.0\FinApp.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\zafru\OneDrive\Desktop\FinApp\obj\Debug\net8.0\FinApp.AssemblyInfoInputs.cache
-C:\Users\zafru\OneDrive\Desktop\FinApp\obj\Debug\net8.0\FinApp.AssemblyInfo.cs
-C:\Users\zafru\OneDrive\Desktop\FinApp\obj\Debug\net8.0\FinApp.csproj.CoreCompileInputs.cache
 C:\Users\zafru\OneDrive\Desktop\FinApp\obj\Debug\net8.0\FinApp.dll
 C:\Users\zafru\OneDrive\Desktop\FinApp\obj\Debug\net8.0\refint\FinApp.dll
 C:\Users\zafru\OneDrive\Desktop\FinApp\obj\Debug\net8.0\FinApp.pdb
