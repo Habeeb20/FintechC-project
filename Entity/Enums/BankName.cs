@@ -4,12 +4,15 @@ namespace Entity.Enums
     {
         GTB = 1,
         Access,
+        Zenith,
+        FBN,
         UBA,
-        WEMA,
-        ZENITH,
-        FisrtBank,
-        Opay,
-        MoneyPoint,
-        PalmPay,
+        EcoBank,
+        Stanbic,
+        Fidelity,
+        Union,
+        Sterling,
+        FCMB,
+        Wema,
     }
 }

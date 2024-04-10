@@ -5,10 +5,9 @@ namespace Repository.Implementations
 {
     public class AccountRepository : IAccountRepository
     {
-        private readonly List<Account> Accounts_DB;
+        private readonly static List<Account> Accounts_DB = [];
         public AccountRepository()
         {
-            Accounts_DB = [];
         }
         // CRUD
         public bool Add(Account account)
@@ -19,6 +18,17 @@ namespace Repository.Implementations
                 return true;
             }
             return false;
+        }
+        public Account GetByCustomerId(Guid id)
+        {
+            foreach (var account in Accounts_DB)
+            {
+                if (account.CustomerUserId == id)
+                {
+                    return account;
+                }
+            }
+            return null;
         }
         public Account GetByPin(int pin)
         {

@@ -5,10 +5,11 @@ namespace Entity
     public class Account : BaseEntity
     {
         public Guid CustomerUserId = default!;
+        public string Name;
         public decimal Balance = 0.00M;
-        public required int Pin;
-        public required string AccountNumber;
-        public required BankName BankName;
+        public int Pin;
+        public string AccountNumber;
+        public BankName BankName;
         public Account(int pin, BankName bankName)
         {
             Pin = pin;
