@@ -1,8 +1,9 @@
 using Entity;
+using Repository.Abstractions;
 
 namespace Repository.Implementations
 {
-    public class TransactionRepository
+    public class TransactionRepository : ITransactionRepository
     {
         private readonly List<Transaction> Transactions_DB;
         public TransactionRepository()

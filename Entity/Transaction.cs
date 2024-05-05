@@ -7,8 +7,8 @@ namespace Entity
         public Guid AccountId = default!;
         public decimal Amount;
         public DateTime TransactionDate = DateTime.Now;
-        public string? Description;
+        public string Description;
         public TransactionType TransactionType;
-        public string? ReceiverAcctNum;        
+        public string ReceiverAcctNum;        
     }
 }

@@ -4,6 +4,7 @@ namespace Entity.Enums
     {
         AirTime = 1,
         Data,
-        Tranfer
+        Trasnfer,
+        Deposit
     }
 }

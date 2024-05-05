@@ -14,7 +14,6 @@ namespace Services.Implementations
         {
             _customerRepository = new CustomerRepository();
         }
-        // DTO
         public bool Register(CreateCustomerRequest request)
         {
             if (request is null)
@@ -37,17 +36,5 @@ namespace Services.Implementations
             var customer = _customerRepository.Get(phone, password);
             return customer;
         }
-        // public (Customer, bool) Update(string pass, UpdateCustomerRequest request)
-        // {
-        //     if (request is null)
-        //         return (null, false);
-
-        //     var authenticatedCustomer = _customerRepository.Get(pass);
-
-        //     if (authenticatedCustomer is null)
-        //         return (null, false);
-
-
-        // }
     }
 }
