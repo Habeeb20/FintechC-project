@@ -1,13 +1,13 @@
 using Entity.Enums;
 
-namespace DTO.Command
+namespace DTO.Query
 {
-    public class CreateTransactionRequest
+    public class TransactionDto
     {
-        public int Pin;
         public decimal Amount;
+        public DateTime TransactionDate;
         public string Description;
-        public string ReceiverAcctNum;  
         public TransactionType TransactionType;
+        public string ReceiverAcctNum;
     }
 }

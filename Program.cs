@@ -1,4 +1,5 @@
-﻿using Menu;
+﻿using Entity;
+using Menu;
 
 internal class Program
 {
