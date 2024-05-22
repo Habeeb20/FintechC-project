@@ -26,7 +26,7 @@ namespace Services.Implementations
             }
             var customer = _customerRepository.GetById(customerId);
             var account = _accountRepository.GetByPin(request.Pin);
-            if (account.CustomerUserId == customer.Id)
+            if (account?.CustomerUserId == customer.Id)
             {
                 if (account.Balance < request.Amount)
                 {
@@ -52,5 +52,25 @@ namespace Services.Implementations
             }
             return (null, "Invalid Pin");
         }
+        public List<TransactionDto> GetAll(Guid customerId)
+        {
+            var account = _accountRepository.GetByCustomerId(customerId);
+            if (account is not null)
+            {
+                Console.WriteLine(account.AccountNumber);
+                var transactions = _transactionRepository.GetAll(account.Id);
+                Console.WriteLine(transactions.Count);
+                return transactions.Select(x => new TransactionDto
+                {
+                    Amount = x.Amount,
+                    TransactionDate = x.TransactionDate,
+                    TransactionType = x.TransactionType,
+                    ReceiverAcctNum = x.ReceiverAcctNum,
+                    Description = x.Description
+                }).ToList();
+            }
+            return [];
+        }
+
     }
 }

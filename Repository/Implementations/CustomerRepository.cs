@@ -14,7 +14,11 @@ namespace Repository.Implementations
         {
             if (customer is not null)
             {
-                Customers_DB.Add(customer);
+                var customerString = customer.ToString();
+                using StreamWriter writer = new(ApplicationConstants.FileConstants.CUSTOMERFILE, true);
+                writer.WriteLine(customerString);
+                writer.Flush();
+                writer.Close();
                 return true;
             }
             return false;

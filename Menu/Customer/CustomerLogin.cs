@@ -62,10 +62,12 @@ namespace Menu.Customer
                     CustomerSubMenu(id);
                     break;
                 case 3:
-                    _transactionMenu.CreateTransaction();
+                    _transactionMenu.CreateTransaction(id);
+                    CustomerSubMenu(id);
                     break;
                 case 4:
-                    _transactionMenu.CheckTransactionHistory();
+                    _transactionMenu.CheckTransactionHistory(id);
+                    CustomerSubMenu(id);
                     break;
                 default:
                     break;

@@ -1,5 +1,6 @@
 using DTO.Command;
 using Entity;
+using Entity.Enums;
 using Services.Implementations;
 using Services.Interfaces;
 
@@ -46,7 +47,10 @@ namespace Menu.Transaction
                 Console.WriteLine("Invalid Input");
                 Console.ResetColor();
             }
-            var transactionRequest = new CreateTransactionRequest();
+            var transactionRequest = new CreateTransactionRequest()
+            {
+                TransactionType = TransactionType.AirTime
+            };
             switch (option)
             {
                 case 1:
@@ -67,6 +71,9 @@ namespace Menu.Transaction
                 default:
                     break;
             }
+            Console.WriteLine("Pin Required");
+            int pin = int.Parse(Console.ReadLine());
+            transactionRequest.Pin = pin;
             var transaction = _transactionService.Create(transactionRequest, customerId);
             Console.WriteLine(transaction.Item2);
         }
@@ -80,7 +87,10 @@ namespace Menu.Transaction
                 Console.WriteLine("Invalid Input");
                 Console.ResetColor();
             }
-            var transactionRequest = new CreateTransactionRequest();
+            var transactionRequest = new CreateTransactionRequest()
+            {
+                TransactionType = TransactionType.Data
+            };
             switch (option)
             {
                 case 1:
@@ -101,11 +111,49 @@ namespace Menu.Transaction
                 default:
                     break;
             }
-            _transactionService.Create(transactionRequest, customerId);
+            Console.WriteLine("Pin Required");
+            int pin = int.Parse(Console.ReadLine());
+            transactionRequest.Pin = pin;
+            var transaction = _transactionService.Create(transactionRequest, customerId);
+            Console.WriteLine(transaction.Item2);
         }
-        public void CheckTransactionHistory()
+        public void CreateTransferTransaction(Guid customerId)
         {
-
+            Console.WriteLine("Amount: ");
+            decimal amount = decimal.Parse(Console.ReadLine());
+            Console.WriteLine("Receiver Account:");
+            string receiverAcctNum = Console.ReadLine();
+            Console.WriteLine("Transaction Description:");
+            string description = Console.ReadLine();
+            Console.WriteLine("Pin Required");
+            int pin = int.Parse(Console.ReadLine());
+            var transaction = new CreateTransactionRequest()
+            {
+                Pin = pin,
+                Amount = amount,
+                Description = description,
+                ReceiverAcctNum = receiverAcctNum,
+                TransactionType = TransactionType.Trasnfer
+            };
+            var transact = _transactionService.Create(transaction, customerId);
+            Console.WriteLine(transact.Item2);
+        }
+        public void CheckTransactionHistory(Guid customerId)
+        {
+            var transactions = _transactionService.GetAll(customerId);
+            Console.WriteLine("_____________Transaction History________________");
+            if (transactions.Count != 0)
+            {
+                foreach (var transaction in transactions)
+                {
+                    Console.WriteLine($"\nAmount: {transaction.Amount}");
+                    Console.WriteLine($"\nTransaction Type: {transaction.TransactionType.ToString()}");
+                    Console.WriteLine($"\nTransaction Date: {transaction.TransactionDate}");
+                    Console.WriteLine($"\nDescription: {transaction.Description}");
+                    Console.WriteLine($"\nReceiver: {transaction.ReceiverAcctNum}");
+                }
+            }
+            Console.WriteLine("________________________________________________");
         }
     }
 }
