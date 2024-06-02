@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using Entity;
 using Repository.Abstractions;
 
@@ -67,6 +68,25 @@ namespace Repository.Implementations
                 return true;
             }
             return false;
+        }
+        public static void LoadInitialData()
+        {
+            var absPaths = Path.Combine(Directory.GetCurrentDirectory(), ApplicationConstants.FileConstants.CUSTOMERFILE);
+            using StreamReader reader = new(absPaths);
+            var custmerData = reader.ReadLine();
+            while (custmerData != null)
+            {
+                try
+                {
+                    var customerToAdd = Customer.FormatLine(custmerData);
+                    Customers_DB.Add(customerToAdd);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message); 
+                }
+                custmerData = reader.ReadLine();
+            }
         }
     }
 }

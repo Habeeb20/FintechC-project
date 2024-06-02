@@ -10,9 +10,9 @@ namespace Entity
         public Customer() : base()
         {
         }
-        internal static Customer FormatLine(string line)
+        internal static Customer FormatLine(string custStr)
         {
-            var props = line.Split('\t');
+            string[] props = custStr.Split('\t');
             return new Customer
             {
                 Id = Guid.Parse(props[0]),
@@ -29,6 +29,5 @@ namespace Entity
         {
             return $"{Id}\t{FirstName}\t{LastName}\t{Password}\t{Phone}\t{Address}\t{NIN}\t{nameof(Gender)}";
         }
-
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Entity;
 using Menu;
+using Repository.Implementations;
 
 internal class Program
 {
@@ -12,6 +13,7 @@ internal class Program
         }
         // Do the same thing to create other files
         Console.ResetColor();
+        CustomerRepository.LoadInitialData();
         var main = new Main();
         main.LandingMenu();
     }
