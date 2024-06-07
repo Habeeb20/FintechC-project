@@ -5,17 +5,21 @@ namespace Repository.Implementations
 {
     public class TransactionRepository : ITransactionRepository
     {
-        private readonly List<Transaction> Transactions_DB;
-        public TransactionRepository()
-        {
-            Transactions_DB  = [];   
-        }
+        private static readonly List<Transaction> Transactions_DB = [];
+        // public TransactionRepository()
+        // {
+        //     Transactions_DB  = [];   
+        // }
         // CRUD
         public bool Add(Transaction transaction)
         {
             if (transaction is not null)
             {
-                Transactions_DB.Add(transaction);
+                var transact = transaction.ToString();
+                using StreamWriter writer = new StreamWriter(ApplicationConstants.FileConstants.TRANSACTION, true);
+                writer.WriteLine();
+                writer.Flush();
+                writer.Close();
                 return true;
             }
             return false;
@@ -43,6 +47,33 @@ namespace Repository.Implementations
             var transactions = Transactions_DB
             .FindAll(t => t.AccountId == accountId && t.TransactionDate.Date >= transactionDate);
             return transactions;
+        }
+
+        public static void LoadInitialTransactionData()
+        {
+            var transactPath = Path.Combine(Directory.GetCurrentDirectory(), ApplicationConstants.FileConstants.TRANSACTION);
+            using StreamReader reader = new(transactPath);
+            var transactionData = reader.ReadLine();
+
+            while( transactionData != null)
+            {
+                try
+                {
+                    var dataReader = Transaction.FormatLine(transactionData);
+                    Transactions_DB.Add(dataReader);
+                }
+                catch (System.Exception e)
+                {
+                    
+                    Console.WriteLine(e.Message);
+                }
+
+                transactionData = reader.ReadLine();
+              
+                
+                
+
+            }
         }
         
     }
