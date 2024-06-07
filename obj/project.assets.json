@@ -8,32 +8,24 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\zafru\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Waliyu Habeeb\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zafru\\OneDrive\\Desktop\\FinApp\\FinApp.csproj",
+      "projectUniqueName": "C:\\Users\\Waliyu Habeeb\\Desktop\\OPP_RepoProject\\FintechC-project\\FinApp.csproj",
       "projectName": "FinApp",
-      "projectPath": "C:\\Users\\zafru\\OneDrive\\Desktop\\FinApp\\FinApp.csproj",
-      "packagesPath": "C:\\Users\\zafru\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zafru\\OneDrive\\Desktop\\FinApp\\obj\\",
+      "projectPath": "C:\\Users\\Waliyu Habeeb\\Desktop\\OPP_RepoProject\\FintechC-project\\FinApp.csproj",
+      "packagesPath": "C:\\Users\\Waliyu Habeeb\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Waliyu Habeeb\\Desktop\\OPP_RepoProject\\FintechC-project\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\zafru\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Waliyu Habeeb\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -72,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

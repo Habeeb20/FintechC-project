@@ -8,7 +8,7 @@ namespace Entity
         public required string LastName;
         public required string Phone;
         public required string Password;
-        public Gender Gender;
+        public required Gender Gender;
         // public User(string firstName, string lastName, string phoneNumber, string password, Gender gender)
         // {
         //     FirstName = firstName;

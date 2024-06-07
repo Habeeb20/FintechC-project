@@ -13,3 +13,18 @@ C:\Users\zafru\OneDrive\Desktop\FinApp\obj\Debug\net8.0\refint\FinApp.dll
 C:\Users\zafru\OneDrive\Desktop\FinApp\obj\Debug\net8.0\FinApp.pdb
 C:\Users\zafru\OneDrive\Desktop\FinApp\obj\Debug\net8.0\FinApp.genruntimeconfig.cache
 C:\Users\zafru\OneDrive\Desktop\FinApp\obj\Debug\net8.0\ref\FinApp.dll
+C:\Users\Waliyu Habeeb\Desktop\OPP_RepoProject\fintechC-project\bin\Debug\net8.0\FinApp.exe
+C:\Users\Waliyu Habeeb\Desktop\OPP_RepoProject\fintechC-project\bin\Debug\net8.0\FinApp.deps.json
+C:\Users\Waliyu Habeeb\Desktop\OPP_RepoProject\fintechC-project\bin\Debug\net8.0\FinApp.runtimeconfig.json
+C:\Users\Waliyu Habeeb\Desktop\OPP_RepoProject\fintechC-project\bin\Debug\net8.0\FinApp.dll
+C:\Users\Waliyu Habeeb\Desktop\OPP_RepoProject\fintechC-project\bin\Debug\net8.0\FinApp.pdb
+C:\Users\Waliyu Habeeb\Desktop\OPP_RepoProject\fintechC-project\obj\Debug\net8.0\FinApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Waliyu Habeeb\Desktop\OPP_RepoProject\fintechC-project\obj\Debug\net8.0\FinApp.AssemblyInfoInputs.cache
+C:\Users\Waliyu Habeeb\Desktop\OPP_RepoProject\fintechC-project\obj\Debug\net8.0\FinApp.AssemblyInfo.cs
+C:\Users\Waliyu Habeeb\Desktop\OPP_RepoProject\fintechC-project\obj\Debug\net8.0\FinApp.csproj.CoreCompileInputs.cache
+C:\Users\Waliyu Habeeb\Desktop\OPP_RepoProject\fintechC-project\obj\Debug\net8.0\FinApp.sourcelink.json
+C:\Users\Waliyu Habeeb\Desktop\OPP_RepoProject\fintechC-project\obj\Debug\net8.0\FinApp.dll
+C:\Users\Waliyu Habeeb\Desktop\OPP_RepoProject\fintechC-project\obj\Debug\net8.0\refint\FinApp.dll
+C:\Users\Waliyu Habeeb\Desktop\OPP_RepoProject\fintechC-project\obj\Debug\net8.0\FinApp.pdb
+C:\Users\Waliyu Habeeb\Desktop\OPP_RepoProject\fintechC-project\obj\Debug\net8.0\FinApp.genruntimeconfig.cache
+C:\Users\Waliyu Habeeb\Desktop\OPP_RepoProject\fintechC-project\obj\Debug\net8.0\ref\FinApp.dll
